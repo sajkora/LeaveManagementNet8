@@ -4,6 +4,7 @@ using LeaveManagement.Web.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LeaveManagement.Web.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240421160619_AddedDefaultUsersAndRoles")]
+    partial class AddedDefaultUsersAndRoles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -106,41 +109,37 @@ namespace LeaveManagement.Web.Data.Migrations
                         {
                             Id = "fe0da13d-266b-43e1-916e-99a1c2ec6c17",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "b07d753a-0add-445a-8a25-409f3bc9a208",
+                            ConcurrencyStamp = "37e8d552-6f0a-4421-a42e-b01eab44c09d",
                             DateJoined = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "admin@gmail.com",
-                            EmailConfirmed = true,
+                            EmailConfirmed = false,
                             FirstName = "admin",
                             LastName = "admin",
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
-                            NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEIAtmqPRUPL5RUQ8Q1s79I2fbU1079EFXKM7ZalJk8KolrVD+7KYmws9A+LStx6y4g==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEM0JlaGbMy/9j3miRnvnBgQ38puQSFIp85tPQvExOikFjASPqiYlJjoTsJ7dINMQKg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "2fadc6ed-aa22-457f-abec-0b8d855c56e0",
-                            TwoFactorEnabled = false,
-                            UserName = "admin@gmail.com"
+                            SecurityStamp = "c341d4e1-c236-46f3-ac3a-bb484a789756",
+                            TwoFactorEnabled = false
                         },
                         new
                         {
                             Id = "9c18b0df-c7bb-4abd-a294-e387c54b0548",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "a6d72200-6260-4bdd-b5aa-f6f4ebaa0011",
+                            ConcurrencyStamp = "73343c77-50be-4722-9d8d-8573f3e26abc",
                             DateJoined = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user@gmail.com",
-                            EmailConfirmed = true,
+                            EmailConfirmed = false,
                             FirstName = "user",
                             LastName = "user",
                             LockoutEnabled = false,
                             NormalizedEmail = "USER@GMAIL.COM",
-                            NormalizedUserName = "USER@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPl9Z1Pj8uIgLkhMrNVCzs1GzOnyunEa1io2e5Kn/6uRnd9uGUQD+wmkX5rmA7sDIg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEMaVJ98KbqbCSVRBY9NQDFl4fvI4fN5L8JGVBsrygljh6RqKxiP6BtwEadpjwzPN9Q==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "41b71447-eb8d-441d-bb73-4e3283cad5c8",
-                            TwoFactorEnabled = false,
-                            UserName = "user@gmail.com"
+                            SecurityStamp = "e9bf6b37-788c-4f50-b9d0-0ccb67500d08",
+                            TwoFactorEnabled = false
                         });
                 });
 
